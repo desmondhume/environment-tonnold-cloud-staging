@@ -25,8 +25,8 @@ pipeline {
       steps {
         container('maven') {
           dir('env') {
-            sh 'jx step helm apply'
             sh 'while true; do date; sleep 5; done'
+            sh 'jx step helm apply'
           }
         }
       }
